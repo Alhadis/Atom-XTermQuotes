@@ -1,0 +1,40 @@
+body:not(.xterm-quotes-disabled) .syntax--xterm-quote{
+	&.syntax--left-quote,
+	&.syntax--right-quote{
+		color: transparent;
+	}
+	
+	&.syntax--quoted-text{
+		display: inline-block;
+		position: relative;
+		
+		&::before,
+		&::after{
+			position: absolute;
+			text-align: center;
+			width: 1ch;
+			top: 0;
+		}
+		
+		// `Single quotes'
+		&::before { content: "‘"; right: 100%; }
+		&::after  { content: "’"; left:  100%; }
+		
+		// ``Double quotes''
+		&.syntax--double{
+			&::before{
+				content: "‘‘ ";
+				width: 2ch;
+				letter-spacing: -.5ch;
+				text-align: right;
+			}
+			&::after{
+				content: " ’’";
+				width: 2ch;
+				letter-spacing: -.5ch;
+				text-align: left;
+				text-indent: -.5ch;
+			}
+		}
+	}
+}

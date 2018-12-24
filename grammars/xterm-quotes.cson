@@ -1,0 +1,24 @@
+scopeName: "hidden.xterm-quotes"
+injectionSelector: "text, comment, docstring, string.quoted.docstring"
+patterns: [include: "#main"]
+
+repository:
+	main:
+		patterns: [
+			{include: "#double"}
+			{include: "#single"}
+		]
+	
+	double:
+		match: "(?<=^|\\G|[\\s\\(\\[\\]{},.;:])(``)([^`']+)('')"
+		captures:
+			1: name: "xterm-quote.double.left-quote"
+			2: name: "xterm-quote.double.quoted-text"
+			3: name: "xterm-quote.double.right-quote"
+	
+	single:
+		match: "(?<=^|\\G|[\\s\\(\\[\\]{},.;:])(`)([^`']+)(')"
+		captures:
+			1: name: "xterm-quote.single.left-quote"
+			2: name: "xterm-quote.single.quoted-text"
+			3: name: "xterm-quote.single.right-quote"
