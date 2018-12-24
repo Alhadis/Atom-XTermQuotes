@@ -1,5 +1,12 @@
 {
 	"name": "xterm-quotes",
 	"version": "0.0.0",
-	"description": "Style `this' to look like ‘this’."
+	"description": "Style `this' to look like ‘this’.",
+	"author": "John Gardner <gardnerjohng@gmail.com>",
+	"repository": "https://github.com/Alhadis/Atom-XTermQuotes",
+	"license": "ISC",
+	"keywords": ["quote", "backtick", "apostrophe", "accent", "quotation", "xterm", "terminal", "console", "tty"],
+	"engines": {
+		"atom": ">=1.25.0"
+	}
 }
