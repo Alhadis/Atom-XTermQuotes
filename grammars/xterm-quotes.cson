@@ -1,5 +1,5 @@
 scopeName: "hidden.xterm-quotes"
-injectionSelector: "text, comment, docstring, string.quoted.docstring"
+injectionSelector: "text, comment, docstring, string.quoted.docstring, source.changelogs"
 patterns: [include: "#main"]
 
 repository:
